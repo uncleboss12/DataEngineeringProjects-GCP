@@ -42,7 +42,7 @@ gcloud sql connect my-demo --user=root --quiet
 ````
 ```bash
 CREATE DATABASE bike;
-```bash
+
 USE bike;
 CREATE TABLE london1 (start_station_name VARCHAR(255), num INT);
 ```
