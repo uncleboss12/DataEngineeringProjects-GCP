@@ -42,22 +42,30 @@ gcloud sql connect my-demo --user=root --quiet
 ````
 ```bash
 CREATE DATABASE bike;
-
+```bash
 USE bike;
 CREATE TABLE london1 (start_station_name VARCHAR(255), num INT);
-
+```
+```bash
 USE bike;
 CREATE TABLE london2 (end_station_name VARCHAR(255), num INT);
-
+```
+```bash
 SELECT * FROM london1;
+```
+```bash
 SELECT * FROM london2;
-
+```
+```bash
 DELETE FROM london1 WHERE num=0;
+```
+```bash
 DELETE FROM london2 WHERE num=0;
-
+```
+```bash
 INSERT INTO london1 (start_station_name, num) VALUES ("test destination", 1);
-
-
+```
+```bash
 SELECT start_station_name AS top_stations, num FROM london1 WHERE num>100000
 UNION
 SELECT end_station_name, num FROM london2 WHERE num>100000
